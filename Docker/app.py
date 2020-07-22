@@ -117,5 +117,5 @@ def process_upload_photo():
       f.save(os.path.join('build/static/media/photos', f.filename))
       return(f.filename)
     
-# if __name__ == "__main__":
-#     app.run()
+if __name__ == "__main__":
+    app.run()

@@ -11,5 +11,8 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 ENV FLASK_APP app.py
+# ENTRYPOINT ["python"]
+# CMD ["app.py"]
 
-CMD ["flask", "run", "--host=0.0.0.0"]
+CMD ["flask", "run", "--host=0.0.0.0", "--port=5001"]
+# CMD gunicorn --bind 0.0.0.0:$PORT wsgi 
